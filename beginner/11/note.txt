@@ -1,10 +1,13 @@
 psql -U postgres -h 207.182.151.252 -p 5432
 
+create database korziny;
+\c korziny;
+
 l:nixer
 p:bArb0$ing
 DB:korziny
 
-psql -U nixer korziny -h 207.182.151.252 -p 5432
+psql -U nixer -d korziny -h 207.182.151.252 -p 5432
 
 CREATE DATABASE korziny;
 CREATE USER nixer WITH PASSWORD 'bArb0$ing';
