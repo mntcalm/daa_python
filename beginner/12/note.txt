@@ -1,4 +1,0 @@
-psql -U postgres -h 207.182.151.252 -p 5432
-
-DB korziny
-

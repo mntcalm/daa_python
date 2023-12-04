@@ -20,3 +20,4 @@ ALTER TABLE "Order" ADD CONSTRAINT carting2 FOREIGN KEY (Carts_cart_id) REFERENC
 \copy carts(cart_id, Users_user_id, subtotal, total, timestamp) FROM '/home/calltop/daa_python/beginner/11/CSV/carts.csv' with (format csv,header false, delimiter ',');
 \copy cart_products(carts_cart_id, products_product_id) FROM '/home/calltop/daa_python/beginner/11/CSV/cart_products.csv' with (format csv, header false, delimiter ',');
 \copy cart_products(carts_cart_id, products_product_id) FROM '/home/calltop/daa_python/beginner/11/CSV/cart_products.csv' with (format csv,header false, delimiter ',');
+\copy "Order"(order_id, Carts_cart_id, Order_status_order_status_id, shipping_total, total, created_at, updated_at) FROM '/home/calltop/daa_python/beginner/11/CSV/orders.csv' with (format csv,header false, delimiter ',');
