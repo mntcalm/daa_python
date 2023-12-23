@@ -1,0 +1,21 @@
+по пункту 4
+
+4. Вывести топ 10 продуктов, которые не только добавляли в корзины, но и оформляли заказы чаще всего. 
+
+
+-- Выбираем топ 10 продуктов по количеству заказов
+SELECT p.product_title, COUNT(o.order_id) AS orders_count FROM Products p
+
+-- Соединяем таблицы продуктов, корзин и заказов
+JOIN Cart_products cp ON p.product_id = cp.products_product_id 
+JOIN "Order" o ON cp.carts_cart_id = o.carts_cart_id
+
+-- Фильтруем только те заказы, у которых статус равен 4
+WHERE o.Order_status_order_status_id = 4
+
+-- Группируем по продуктам и сортируем по убыванию количества заказов
+GROUP BY p.product_title 
+ORDER BY orders_count DESC LIMIT 10;
+
+-- Ограничиваем выборку до 10 строк
+LIMIT 10;

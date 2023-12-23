@@ -1,0 +1,4 @@
+т.к. заполнять чем-то надо, сделаю ка из имеющегося файла для этой таблицы:
+
+cat users.csv | awk -F, {'print $1","$2",PTT"$4","$5","$6","$9'} > potential_customers.csv
+psql -U nixer -d korziny -h 207.182.151.252 -p 5432 < 18.sql

@@ -1,0 +1,3 @@
+CREATE TABLE potential_customers (id SERIAL PRIMARY KEY, email VARCHAR(255), name VARCHAR(255),surname VARCHAR(255), second_name VARCHAR(255), city VARCHAR(255));
+\copy potential_customers(id,email,name,surname,second_name,city) FROM '/home/calltop/daa_python/beginner/11/CSV/potential_customers.csv' with (format csv, header false, delimiter ',');
+SELECT name, email from potential_customers WHERE city='city 17';
