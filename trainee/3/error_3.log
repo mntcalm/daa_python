@@ -1,0 +1,7 @@
+wrapper () (<class 'ZeroDivisionError'>, ZeroDivisionError('division by zero'), <traceback object at 0x7f135a4ee880>)
+Traceback (most recent call last):
+  File "3.py", line 12, in wrapper
+    return func(*args, **kwargs)
+  File "3.py", line 25, in divide
+    return x / y
+ZeroDivisionError: division by zero
