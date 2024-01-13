@@ -1,0 +1,1 @@
+SELECT product_title, category_title AS c_t FROM Products AS p, Categories AS c WHERE p.category_id = c.category_id LIMIT 20;

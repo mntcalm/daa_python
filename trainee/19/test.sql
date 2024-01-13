@@ -1,0 +1,1 @@
+SELECT Carts_cart_id, total, Order_status_order_status_id, status_name AS s_n FROM "Order" AS o_r, Order_status AS o_s WHERE o_r.Order_status_order_status_id = o_s.order_status_id LIMIT 20;

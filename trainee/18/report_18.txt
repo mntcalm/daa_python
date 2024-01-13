@@ -1,0 +1,26 @@
+EXPLAIN SELECT * FROM Users ORDER BY email;
+                           QUERY PLAN                            
+-----------------------------------------------------------------
+ Sort  (cost=260.26..267.76 rows=3000 width=115)
+   Sort Key: email
+   ->  Seq Scan on users  (cost=0.00..87.00 rows=3000 width=115)
+(3 rows)
+
+
+
+EXPLAIN SELECT * FROM Users ORDER BY last_name, first_name;
+                           QUERY PLAN                            
+-----------------------------------------------------------------
+ Sort  (cost=260.26..267.76 rows=3000 width=115)
+   Sort Key: last_name, first_name
+   ->  Seq Scan on users  (cost=0.00..87.00 rows=3000 width=115)
+(3 rows)
+
+
+EXPLAIN SELECT * FROM Products ORDER BY category_id, product_title;
+                             QUERY PLAN                              
+---------------------------------------------------------------------
+ Sort  (cost=384.32..394.32 rows=4000 width=584)
+   Sort Key: category_id, product_title
+   ->  Seq Scan on products  (cost=0.00..145.00 rows=4000 width=584)
+(3 rows)
